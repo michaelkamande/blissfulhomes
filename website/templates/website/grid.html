@@ -1,0 +1,194 @@
+{% load static %}
+<div class="row property-filter">
+              {% for i in items %}
+                <div class="col-lg-4 col-md-6 mix all house">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="{{ i.image.url }}">
+                            {% if i.mode == 'A Louer' %}
+                            <div class="label">{{ i.mode }}</div>
+                            {% elif i.mode == 'A Vendre' %}
+                            <div class="label c-red">{{ i.mode }}</div>
+                            {% endif %}
+
+                        </div>
+
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">{{ i.prix }}<span></span></div>
+                            <h5><a href="{{ i.get_absolute_url }}">{{ i.titre }} </a></h5>
+                            {% if i.est_disponible == 'Déjà pris' %}
+                                <span style="float:right"><font color="red">{{ i.est_disponible }}</font></span>
+                            {% endif %}
+                            <p><span class="icon_pin_alt"></span>{{ i.zone }}, {{ i.ville }}</p>
+                            <ul>
+                                <li><i class="fa fa-bed"></i> {{ i.chambres }}</li>
+                                <li><i class="fas fa-utensils"></i> {{ i.cuisine }}</li>
+                                <li><i class="fa fa-bathtub"></i> {{ i.salle_de_bain }}</li>
+                                <li><i class="fa fa-automobile"></i> {{ i.parking }}</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="{% static 'website/img/craig.jpg' %}" alt="">
+                                        <h6>Craig Junior</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        +243 85 000 6218
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+
+              {% for i in items1 %}
+                <div class="col-lg-4 col-md-6 mix all house">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="{{ i.image.url }}">
+                            {% if i.mode == 'A Louer' %}
+                            <div class="label">{{ i.mode }}</div>
+                            {% elif i.mode == 'A Vendre' %}
+                            <div class="label c-red">{{ i.mode }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">{{ i.prix }}<span></span></div>
+                            <h5><a href="{{ i.get_absolute_url }}">{{ i.titre }}</a></h5>
+                            <p><span class="icon_pin_alt"></span>{{ i.zone }}, {{ i.ville }}</p>
+                            <ul>
+                                <li><i class="fa fa-bed"></i> {{ i.chambres }}</li>
+                                <li><i class="fas fa-utensils"></i> {{ i.cuisine }}</li>
+                                <li><i class="fa fa-bathtub"></i> {{ i.salle_de_bain }}</li>
+                                <li><i class="fa fa-automobile"></i> {{ i.parking }}</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="{% static 'website/img/craig.jpg' %}" alt="">
+                                        <h6>Craig Junior</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        +243 85 000 6218
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+
+              {% for i in items2 %}
+                <div class="col-lg-4 col-md-6 mix all house">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="{{ i.image.url }}">
+                            {% if i.mode == 'A Louer' %}
+                            <div class="label">{{ i.mode }}</div>
+                            {% elif i.mode == 'A Vendre' %}
+                            <div class="label c-red">{{ i.mode }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">{{ i.prix }}<span></span></div>
+                            <h5><a href="{{ i.get_absolute_url }}">{{ i.titre }}</a></h5>
+                            <p><span class="icon_pin_alt"></span>{{ i.zone }}, {{ i.ville }}</p>
+                            <ul>
+                                <li><i class="fa fa-bed"></i> {{ i.chambres }}</li>
+                                <li><i class="fas fa-utensils"></i> {{ i.cuisine }}</li>
+                                <li><i class="fa fa-bathtub"></i> {{ i.salle_de_bain }}</li>
+                                <li><i class="fa fa-automobile"></i> {{ i.parking }}</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="{% static 'website/img/craig.jpg' %}" alt="">
+                                        <h6>Craig Junior</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        +243 85 000 6218
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+
+              {% for i in items3 %}
+                <div class="col-lg-4 col-md-6 mix all house">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="{{ i.image.url }}">
+                            {% if i.mode == 'A Louer' %}
+                            <div class="label">{{ i.mode }}</div>
+                            {% elif i.mode == 'A Vendre' %}
+                            <div class="label c-red">{{ i.mode }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">{{ i.prix }}<span></span></div>
+                            <h5><a href="{{ i.get_absolute_url }}">{{ i.titre }}</a></h5>
+                            <p><span class="icon_pin_alt"></span>{{ i.zone }}, {{ i.ville }}</p>
+                            <ul>
+                                <li><i class="fa fa-bed"></i> {{ i.chambres }}</li>
+                                <li><i class="fas fa-utensils"></i> {{ i.cuisine }}</li>
+                                <li><i class="fa fa-bathtub"></i> {{ i.salle_de_bain }}</li>
+                                <li><i class="fa fa-automobile"></i> {{ i.parking }}</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="{% static 'website/img/craig.jpg' %}" alt="">
+                                        <h6>Craig Junior</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        +243 85 000 6218
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+
+              {% for i in items4 %}
+                <div class="col-lg-4 col-md-6 mix all house">
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="{{ i.image.url }}">
+                            {% if i.mode == 'A Louer' %}
+                            <div class="label">{{ i.mode }}</div>
+                            {% elif i.mode == 'A Vendre' %}
+                            <div class="label c-red">{{ i.mode }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="pi-text">
+                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <div class="pt-price">{{ i.prix }}<span></span></div>
+                            <h5><a href="{{ i.get_absolute_url }}">{{ i.titre }}</a></h5>
+                            <p><span class="icon_pin_alt"></span>{{ i.zone }}, {{ i.ville }}</p>
+                            <ul>
+                                <li><i class="fa fa-bed"></i> {{ i.chambres }}</li>
+                                <li><i class="fas fa-utensils"></i> {{ i.cuisine }}</li>
+                                <li><i class="fa fa-bathtub"></i> {{ i.salle_de_bain }}</li>
+                                <li><i class="fa fa-automobile"></i> {{ i.parking }}</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <img src="{% static 'website/img/craig.jpg' %}" alt="">
+                                        <h6>Craig Junior</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        +243 85 000 6218
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+
+              
+            </div>

@@ -1,0 +1,71 @@
+{% extends "website/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+	<div class="hs-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li><a href="{% url 'home' %}">Acceuil</a></li>
+                                <li><a href="{% url 'properties' %}">Propriétés</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{% url 'appartments' %}">Appartements</a></li>
+                                        <li><a href="{% url 'houses' %}">Maisons</a></li>
+                                        <li><a href="{% url 'offices' %}">Bureaux</a></li>
+                                        <li><a href="{% url 'terrains' %}">Terrains</a></li>
+                                        <li><a href="{% url 'publish' %}">Publier</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'rent' %}">Louer</a></li>
+                                <li><a href="{% url 'buy' %}">Acheter</a></li>
+                                <li><a href="{% url 'publish' %}">Vendre</a></li>
+                                <li><a href="{% url 'favorites' %}">Favoris</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="hn-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section spad set-bg" data-setbg="{% static 'website/img/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h4>Soumettre une propriété</h4>
+                        <div class="bt-option">
+                            <a href="{% url 'home' %}"><i class="fa fa-home"></i> Acceuil</a>
+                            <span>Publier</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<div class = "container box-element mt-4 mb-4">
+		<div class="col-md-8 mt-5 mb-5">
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<fieldset class = "form-group">
+					<legend class="border-bottom mb-4">Soummettre une propriété</legend>
+					{{ form|crispy }}
+				</fieldset>
+				<div class = "form-group">
+					<button class = "btn btn-danger" type="submit">Publier</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock content %}

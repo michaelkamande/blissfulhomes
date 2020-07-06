@@ -1,0 +1,14 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+<br>
+	<div class="container">
+		<h2>Vous etes déconnecté!</h2>
+		<div class="border-top pt-3">
+			<small class="text-muted">
+				<p><a href="{% url 'login' %}">Connexion</a></p>
+				<p><a href="{% url 'home' %}">Acceuil</a></p>
+			</small>
+		</div>
+	</div>
+{% endblock content %}

@@ -1,0 +1,286 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="hs-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li><a href="{% url 'home' %}">Acceuil</a></li>
+                                <li class="active"><a href="{% url 'properties' %}">Propriétés</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{% url 'appartments' %}">Appartements</a></li>
+                                        <li><a href="{% url 'houses' %}">Maisons</a></li>
+                                        <li><a href="{% url 'offices' %}">Bureaux</a></li>
+                                        <li><a href="{% url 'terrains' %}">Terrains</a></li>
+                                        <li><a href="{% url 'publish' %}">Publier</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'rent' %}">Louer</a></li>
+                                <li><a href="{% url 'buy' %}">Acheter</a></li>
+                                <li><a href="{% url 'publish' %}">Vendre</a></li>
+                                <li><a href="{% url 'favorites' %}">Favoris</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="hn-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Property Details Section Begin -->
+    <section class="property-details-section">
+        <div class="property-pic-slider owl-carousel">
+            <div class="ps-item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <div class="ps-item-inner large-item set-bg" data-setbg="{{ object.image.url }}"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                {% if object.image1 %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image1.url }}"></div>
+                                </div>
+                                {% else %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image.url }}"></div>
+                                </div>
+                                {% endif %}
+
+                                {% if object.image2 %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image2.url }}"></div>
+                                </div>
+                                {% else %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image.url }}"></div>
+                                </div>
+                                {% endif %}
+                                {% if object.image3 %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image3.url }}"></div>
+                                </div>
+                                {% else %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image.url }}"></div>
+                                </div>
+                                {% endif %}
+                                {% if object.image4 %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image4.url }}"></div>
+                                </div>
+                                {% else %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image.url }}"></div>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ps-item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                {% if object.image5 %}
+                                <div class="col-lg-12 p-0">
+                                    <div class="ps-item-inner large-item set-bg" data-setbg="{{ object.image5.url }}"></div>
+                                </div>
+                                {% else %}
+                                <div class="col-lg-12 p-0">
+                                    <div class="ps-item-inner large-item set-bg" data-setbg="{{ object.image.url }}"></div>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                {% if object.image6 %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image6.url }}"></div>
+                                </div>
+                                {% else %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image.url }}"></div>
+                                </div>
+                                {% endif %}
+                                {% if object.image7 %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image7.url }}"></div>
+                                </div>
+                                {% else %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image.url }}"></div>
+                                </div>
+                                {% endif %}
+                                {% if object.image8 %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image8.url }}"></div>
+                                </div>
+                                {% else %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image.url }}"></div>
+                                </div>
+                                {% endif %}
+                                {% if object.image9 %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image9.url }}"></div>
+                                </div>
+                                {% else %}
+                                <div class="col-sm-6 p-0">
+                                    <div class="ps-item-inner set-bg" data-setbg="{{ object.image.url }}"></div>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="pd-text">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="pd-title">
+                                    <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                                    {% if object.mode == 'A Louer' %}
+                                    <div class="label">{{ object.mode }}</div>
+                                    <div class="pt-price">{{ object.prix }}<span> /mois</span></div>
+                                    {% elif object.mode == 'A Vendre' %}
+                                    <div class="label c-red">{{ object.mode }}</div>
+                                    <div class="pt-price">{{ object.prix }}</div>
+                                    {% endif %}
+                                    <h3>{{ object.title }}</h3>
+                                    <p><span class="icon_pin_alt"></span>{{ object.zone }}, {{ object.ville }}</p>
+                                    {% if object.est_disponible == 'Déjà pris' %}
+                                        <span><font color="red">{{ object.est_disponible }}</font></span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pd-board">
+                            <div class="tab-board">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Vue d'ensemble</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Description</a>
+                                    </li>
+                                </ul><!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                        <div class="tab-details">
+                                            <ul class="left-table">
+                                                <li>
+                                                    <span class="type-name">Type</span>
+                                                    <span class="type-value">{{ object.category }}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="type-name">Identifiant</span>
+                                                    <span class="type-value">{{ object.id }}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="type-name">Prix</span>
+                                                    {% if object.mode == 'A Louer' %}
+                                                    <span class="type-value">{{ object.prix }}/mois</span>
+                                                    {% elif object.mode == 'A Vendre' %}
+                                                    <span class="type-value">{{ object.prix }}</span>
+                                                    {% endif %}
+                                                </li>
+                                                <li>
+                                                    <span class="type-name">Publicateur</span>
+                                                    <span class="type-value">{{ object.publicateur }}</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="right-table">
+                                                <li>
+                                                    <span class="type-name">Zone</span>
+                                                    <span class="type-value">{{ object.zone }}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="type-name">Salons</span>
+                                                    <span class="type-value">{{ object.salon }}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="type-name">Chambres</span>
+                                                    <span class="type-value">{{ object.chambres }}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="type-name">Cuisine</span>
+                                                    <span class="type-value">{{ object.cuisine }}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="type-name">Salle de bain</span>
+                                                    <span class="type-value">{{ object.salle_de_bain }}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="type-name">Parking</span>
+                                                    <span class="type-value">{{ object.parking }}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                        <div class="tab-desc">
+                                            <p>{{ object.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                    
+                        <div class="pd-widget">
+                            <br><br>
+                            <h4>Agent</h4>
+                            <div class="pd-agent">
+                                <div class="agent-pic">
+                                    <img src="{% static 'website/img/craig.jpg' %}" alt="">
+                                </div>
+                                <div class="agent-text">
+                                    <div class="at-title">
+                                        <h6>Craig Junior Kabamba</h6>
+                                        <span>Courtier Gérant Immobilier</span>
+                                    </div>
+                                    <div class="at-option">
+                                        <div class="at-number">+243 85 000 6218</div>
+                                        <div class="at-social">
+                                            <a href="https://web.facebook.com/craig.jkl?__tn__=%2Cd*F*F-R&eid=ARCI6nrvxsQPUqUgvadlGbHor2XF_dmt33KqpW2CwnGUPTEdgMoz57BGw9SwjXh1CVXptz3DcK46DyZ2&tn-str=*F"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+{% endblock %}

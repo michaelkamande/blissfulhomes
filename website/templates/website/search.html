@@ -1,0 +1,103 @@
+<section class="search-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h4>Recherchez une propriété</h4>
+                    </div>
+                </div><!--
+                <div class="col-lg-5">
+                    <div class="change-btn">
+                        <div class="cb-item text-white">
+                            <label for="cb-rent" class="active">
+                                <a href="{% url 'rent' %}">A louer</a>
+                                <input type="radio" id="cb-rent">
+                            </label>
+                        </div>
+                        <div class="cb-item text-dark">
+                                <label for="cb-sale">
+                                    <a href="{% url 'buy' %}">A vendre </a>
+                                    <input type="radio" id="cb-sale">
+                                </label>
+                               
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <div class="search-form-content"><!--
+                <form action="#" class="filter-form">
+                    <select class="sm-width">
+                        <option value="">Ville</option>
+                    </select>
+                    <select class="sm-width">
+                        <option value="">Localité</option>
+                    </select>
+                    <select class="sm-width">
+                        <option value="">Etat</option>
+                    </select>
+                    <select class="sm-width">
+                        <option value="">Type</option>
+                    </select>
+                    <select class="sm-width">
+                        <option value="">No. Chambres</option>
+                    </select>
+                    <select class="sm-width">
+                        <option value="">No. Salles de bain</option>
+                    </select>
+                    <div class="room-size-range-wrap sm-width">
+                        <div class="price-text">
+                            <label for="roomsizeRange">Superficie:</label>
+                            <input type="text" id="roomsizeRange" readonly>
+                        </div>
+                        <div id="roomsize-range" class="slider"></div>
+                    </div>
+                    <div class="price-range-wrap sm-width">
+                        <div class="price-text">
+                            <label for="priceRange">Prix:</label>
+                            <input type="text" id="priceRange" readonly>
+                        </div>
+                        <div id="price-range" class="slider"></div>
+                    </div>
+                    <button type="button" class="search-btn sm-width">Rechercher</button>
+                </form>-->
+                <div class="col-md-11">
+                    <form class="filter-form" method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="search" placeholder="Mots-clés, Région, Prix ..." class="form-control">
+                        <input type="submit" name="submit" value="Rechercher" class="btn btn-danger mt-2" style="float: right">
+                    </form>
+                </div>
+            </div><!--
+            <div class="more-option">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-heading active">
+                            <a data-toggle="collapse" data-target="#collapseOne">
+                                Plus d'options
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="mo-list">
+                                    <div class="ml-column">
+                                        <label for="air">Climatisation
+                                            <input type="checkbox" id="air">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label for="lundry">Douche interne
+                                            <input type="checkbox" id="lundry">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <label for="pool">Piscine
+                                            <input type="checkbox" id="pool">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </section>

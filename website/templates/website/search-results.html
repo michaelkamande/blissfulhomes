@@ -1,0 +1,48 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="hs-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li><a href="{% url 'home' %}">Acceuil</a></li>
+                                <li class="active"><a href="{% url 'properties' %}">Propriétés</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{% url 'appartments' %}">Appartements</a></li>
+                                        <li><a href="{% url 'houses' %}">Maisons</a></li>
+                                        <li><a href="{% url 'offices' %}">Bureaux</a></li>
+                                        <li><a href="{% url 'terrains' %}">Terrains</a></li>
+                                        <li><a href="{% url 'publish' %}">Publier</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'rent' %}">Louer</a></li>
+                                <li><a href="{% url 'buy' %}">Acheter</a></li>
+                                <li><a href="{% url 'publish' %}">Vendre</a></li>
+                                <li><a href="{% url 'favorites' %}">Favoris</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="hn-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-5 mb-5">
+    	<h2>Résultats de la récherche ...</h2>
+    	<br>
+    	<br>
+    	{% include 'website/grid.html' %}
+    </div>
+
+{% endblock %}
